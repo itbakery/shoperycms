@@ -42,3 +42,23 @@ gem 'bcrypt'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'devise'
+gem 'bson_ext', :platform => "ruby"
+gem 'mongoid', :github => 'mongoid/mongoid'
+gem 'cancan'
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'carrierwave-mongoid' ,:require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
+gem 'rails_layout', github: 'RailsApps/rails_layout'
+gem 'bootstrap-generators', :git => 'git://github.com/decioferreira/bootstrap-generators.git'
+gem 'rolify', "3.2.0"
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'rmagick'
+gem 'mini_magick'
+gem 'bootstrap-datepicker-rails'
+gem 'font-awesome-rails'
