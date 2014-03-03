@@ -16,4 +16,5 @@
 //= require bootstrap/bootstrap
 //= require sbadmin/sb-admin
 //= require sbadmin/plugins/metisMenu/jquery.metisMenu
+//= require datepicker/bootstrap-datepicker
 //= require_tree .
