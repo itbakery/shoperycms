@@ -1,23 +1,10 @@
 GIT
-  remote: git://github.com/RailsApps/rails_layout.git
-  revision: 1f2dc84ad56815388b1dac290d16cd6ea576028d
-  specs:
-    rails_layout (1.0.10)
-
-GIT
   remote: git://github.com/ahoward/mongoid-grid_fs.git
   revision: 059012a2c2a9e0a5d6e67137752c3e918689c88a
   specs:
     mongoid-grid_fs (1.9.0)
       mime-types (~> 1.19)
       mongoid (>= 3.0, < 5.0)
-
-GIT
-  remote: git://github.com/decioferreira/bootstrap-generators.git
-  revision: d0adb6f6a6cc0bdb5ef65e38f6c14da8b4429b5a
-  specs:
-    bootstrap-generators (3.1.1.1)
-      railties (>= 3.1.0)
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
@@ -120,6 +107,8 @@ GEM
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (4.7.5)
+    mongoid-tree (1.0.4)
+      mongoid (>= 3.0, <= 4.0)
     moped (2.0.0.beta6)
       bson (~> 2.2)
       connection_pool (~> 1.2)
@@ -220,7 +209,6 @@ DEPENDENCIES
   bcrypt
   bcrypt-ruby (~> 3.1.2)
   bootstrap-datepicker-rails
-  bootstrap-generators!
   bson_ext
   cancan
   carrierwave
@@ -236,11 +224,11 @@ DEPENDENCIES
   mini_magick
   mongoid!
   mongoid-grid_fs!
+  mongoid-tree
   omniauth
   omniauth-facebook
   omniauth-twitter
   rails (= 4.0.2)
-  rails_layout!
   rmagick
   rolify (= 3.2.0)
   sass-rails (~> 4.0.0)

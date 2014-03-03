@@ -1,4 +1,6 @@
 Shoperycms::Application.routes.draw do
+  resources :categories
+
   resources :contacts
 
   devise_for :users
