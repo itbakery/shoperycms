@@ -1,0 +1,29 @@
+<h1>Listing product_plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_plans.each do |product_plan| %>
+      <tr>
+        <td><%= product_plan.month %></td>
+        <td><%= product_plan.content %></td>
+        <td><%= link_to 'Show', product_plan %></td>
+        <td><%= link_to 'Edit', edit_product_plan_path(product_plan) %></td>
+        <td><%= link_to 'Destroy', product_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product plan', new_product_plan_path %>

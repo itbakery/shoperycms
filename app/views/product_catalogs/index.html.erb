@@ -1,0 +1,31 @@
+<h1>Listing product_catalogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Released on</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_catalogs.each do |product_catalog| %>
+      <tr>
+        <td><%= product_catalog.name %></td>
+        <td><%= product_catalog.description %></td>
+        <td><%= product_catalog.released_on %></td>
+        <td><%= link_to 'Show', product_catalog %></td>
+        <td><%= link_to 'Edit', edit_product_catalog_path(product_catalog) %></td>
+        <td><%= link_to 'Destroy', product_catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product catalog', new_product_catalog_path %>

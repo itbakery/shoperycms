@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @price_schema.quantity %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @price_schema.unit %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @price_schema.price %>
+</p>
+
+<%= link_to 'Edit', edit_price_schema_path(@price_schema) %> |
+<%= link_to 'Back', price_schemas_path %>

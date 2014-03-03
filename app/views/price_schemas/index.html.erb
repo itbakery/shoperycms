@@ -1,0 +1,31 @@
+<h1>Listing price_schemas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Unit</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_schemas.each do |price_schema| %>
+      <tr>
+        <td><%= price_schema.quantity %></td>
+        <td><%= price_schema.unit %></td>
+        <td><%= price_schema.price %></td>
+        <td><%= link_to 'Show', price_schema %></td>
+        <td><%= link_to 'Edit', edit_price_schema_path(price_schema) %></td>
+        <td><%= link_to 'Destroy', price_schema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price schema', new_price_schema_path %>

@@ -2,6 +2,7 @@ class Profile
   include Mongoid::Document
   include Geocoder::Model::Mongoid
   belongs_to :user
+  mount_uploader  :avatar, AvatarUploader
   field :first_name, type: String
   field :last_name, type: String
   field :address, type: String

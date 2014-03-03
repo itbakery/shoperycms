@@ -1,0 +1,37 @@
+<%= form_for(@product_catalog) do |f| %>
+  <% if @product_catalog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product_catalog.errors.count, "error") %> prohibited this product_catalog from being saved:</h2>
+
+      <ul>
+      <% @product_catalog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :released_on %><br>
+    <%= f.text_field :released_on %>
+  </div>
+
+  <div class="field">
+    <%= f.fields_for :photo_products do |attachments| %>
+      <%= attachments.label :name , "Photo" %>
+      <%= attachments.text_field :name %>
+      <%= attachments.file_field :photo %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

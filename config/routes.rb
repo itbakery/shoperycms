@@ -1,4 +1,16 @@
 Shoperycms::Application.routes.draw do
+  resources :product_catalogs
+
+  resources :photo_products
+
+  resources :product_plans
+
+  resources :price_schemas
+
+  resources :reviews
+
+  resources :products
+
   resources :categories
 
   resources :contacts
