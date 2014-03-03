@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  layout 'test'
+  layout 'admin'
   def index
   end
 end
