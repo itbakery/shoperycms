@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require font-awesome
+ *= require jquery.ui.all
  *= require sbadmin/sb-admin
  *= require datetimepicker/bootstrap-datetimepicker
  *= require_tree .

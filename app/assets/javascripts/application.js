@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/bootstrap
@@ -19,3 +20,11 @@
 //= require datetimepicker/moment
 //= require datetimepicker/bootstrap-datetimepicker.min
 //= require_tree .
+//
+$(document).on 'ready page:load', ->
+    $('#sortable').sortable
+    axis: 'y'
+    handle: '.handle'
+    update: ->
+      alert("test")
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))

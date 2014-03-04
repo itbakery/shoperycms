@@ -1,1 +1,7 @@
 @import "../../../vendor/assets/stylesheets/bootstrap/bootstrap.scss";
+
+#sortable .handle {
+  font-size: 12px;
+  color: #777;
+  cursor: move;
+}
