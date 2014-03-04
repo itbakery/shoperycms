@@ -11,3 +11,4 @@ class Article
 end
 
 #add  _slugs field of type Array in to Article
+#automatic handle  linkto
