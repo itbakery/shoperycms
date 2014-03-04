@@ -11,6 +11,6 @@
  *= require_self
  *= require font-awesome
  *= require sbadmin/sb-admin
- *= require datepicker/datepicker
+ *= require datetimepicker/bootstrap-datetimepicker
  *= require_tree .
  */
