@@ -1,6 +1,6 @@
 class User
   include Mongoid::Document
-
+  has_many :articles
   has_one :profile, dependent: :destroy,  autosave: true
   accepts_nested_attributes_for :profile
 

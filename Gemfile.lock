@@ -16,6 +16,14 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
+GIT
+  remote: https://github.com/nofxx/mongoid-slug.git
+  revision: f77431917f8ac393e12db10a97a00a56c68092b5
+  specs:
+    mongoid_slug (3.1.2)
+      mongoid (> 3.0)
+      stringex (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -182,6 +190,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    stringex (2.2.1)
     subexec (0.2.3)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
@@ -225,6 +234,7 @@ DEPENDENCIES
   mongoid!
   mongoid-grid_fs!
   mongoid-tree
+  mongoid_slug!
   omniauth
   omniauth-facebook
   omniauth-twitter
