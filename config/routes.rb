@@ -1,4 +1,6 @@
 Shoperycms::Application.routes.draw do
+  resources :pages
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :comments
 

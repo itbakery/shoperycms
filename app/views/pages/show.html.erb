@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to pages_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_page_path(@page), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show page</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @page.name %></dd>
+
+  <dt>Content:</dt>
+  <dd><%= @page.content %></dd>
+
+  <dt>Published on:</dt>
+  <dd><%= @page.published_on %></dd>
+
+  <dt>Is published:</dt>
+  <dd><%= @page.is_published %></dd>
+
+  <dt>Approved by:</dt>
+  <dd><%= @page.approved_by %></dd>
+
+</dl>
