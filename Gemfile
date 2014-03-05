@@ -52,6 +52,8 @@ gem 'carrierwave-mongoid' ,:require => 'carrierwave/mongoid'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'mongoid_slug' , :git => 'https://github.com/nofxx/mongoid-slug.git'
+gem 'rails_layout', github: 'RailsApps/rails_layout'
+gem 'bootstrap-generators', :git => 'git://github.com/decioferreira/bootstrap-generators.git'
 gem 'rolify', "3.2.0"
 gem 'omniauth'
 gem 'omniauth-facebook'

@@ -11,14 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.ui.all
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/bootstrap
+//= require bootstrap
 //= require sbadmin/sb-admin
 //= require sbadmin/plugins/metisMenu/jquery.metisMenu
 //= require datetimepicker/moment
 //= require datetimepicker/bootstrap-datetimepicker.min
+//= require ckeditor/init
 //= require_tree .
-//
-

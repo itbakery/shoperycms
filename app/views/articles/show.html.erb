@@ -1,40 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @article.name %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Published on:</strong>
-  <%= @article.published_on %>
-</p>
-
-<p>
-  <strong>Approved by:</strong>
-  <%= @article.approved_by %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-
-<% if @article.comments.size > 0 %>
-  <h2>Comments</h2>
-  <% for comment in @article.comments %>
-    <h3><%= comment.name %></h3>
-    <p><%= comment.content %></p>
+<div class="page-header">
+  <%= link_to articles_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
   <% end %>
-<% end %>
+  <%= link_to edit_article_path(@article), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show article</h1>
+</div>
 
-<h2>New Comment</h2>
-<%= form_for [@article, Comment.new] do |f| %>
-  <p><%= f.label :name %> <%= f.text_field :name %></p>
-  <p><%= f.text_area :content, :rows => 10 %></p>
-  <p><%= f.submit %></p>
-<% end %>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @article.name %></dd>
 
+  <dt>Content:</dt>
+  <dd><%= @article.content %></dd>
+
+  <dt>Published on:</dt>
+  <dd><%= @article.published_on %></dd>
+
+  <dt>Is published:</dt>
+  <dd><%= @article.is_published %></dd>
+
+  <dt>Approved by:</dt>
+  <dd><%= @article.approved_by %></dd>
+
+</dl>

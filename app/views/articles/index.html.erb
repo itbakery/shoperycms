@@ -1,33 +1,39 @@
-<h1>Listing articles</h1>
+<div class="page-header">
+  <%= link_to new_article_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Article
+  <% end %>
+  <h1>Listing articles</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Published on</th>
-      <th>Approved by</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= article.name %></td>
-        <td><%= article.content %></td>
-        <td><%= article.published_on %></td>
-        <td><%= article.approved_by %></td>
-        <td><%= link_to 'Show', article %></td>
+            <th>Name</th>
+            <th>Slug</th>
+            <th>Content</th>
+            <th>Published on</th>
+            <th>Is published</th>
+            <th>Approved by</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @articles) do |article| %>
+            <td><%= article.name %></td>
+            <td><%= article.slug %></td>
+            <td><%= article.content %></td>
+            <td><%= article.published_on %></td>
+            <td><%= article.is_published %></td>
+            <td><%= article.approved_by %></td>
+            <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
