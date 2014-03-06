@@ -1,4 +1,6 @@
 Shoperycms::Application.routes.draw do
+  resources :newsinfos
+
   resources :menus
 
   resources :pages

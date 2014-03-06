@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to newsinfos_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_newsinfo_path(@newsinfo), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show newsinfo</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @newsinfo.name %></dd>
+
+  <dt>Content:</dt>
+  <dd><%= @newsinfo.content %></dd>
+
+  <dt>Published on:</dt>
+  <dd><%= @newsinfo.published_on %></dd>
+
+  <dt>Is published:</dt>
+  <dd><%= @newsinfo.is_published %></dd>
+
+  <dt>Approved by:</dt>
+  <dd><%= @newsinfo.approved_by %></dd>
+
+</dl>
