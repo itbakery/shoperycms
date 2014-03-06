@@ -1,4 +1,6 @@
 Shoperycms::Application.routes.draw do
+  resources :menus
+
   resources :pages
 
   mount Ckeditor::Engine => '/ckeditor'

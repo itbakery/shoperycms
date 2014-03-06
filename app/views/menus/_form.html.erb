@@ -1,0 +1,38 @@
+<%= form_for(@menu, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @menu.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h4>
+
+      <ul>
+      <% @menu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group ">
+      <%= f.label :parent, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-5">
+        <%= f.collection_select  :parent_id, Menu.tree_list, :id, :name_th, {prompt: true} , {class: "form-control"}  %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :name_th, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name_th, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :name_en, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name_en, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
