@@ -1,6 +1,7 @@
 Shoperycms::Application.routes.draw do
 
 
+  get "blogs/index"
   get "contactus/index"
   get "products/index"
   get "articles/index"
@@ -19,7 +20,7 @@ Shoperycms::Application.routes.draw do
   resources :products
   resources :contactus
   resources :newsinfos
-
+  resources :blogs
   resources :menus
 
   resources :pages
