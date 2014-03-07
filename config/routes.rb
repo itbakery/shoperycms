@@ -1,16 +1,23 @@
 Shoperycms::Application.routes.draw do
+
+
+  get "contactus/index"
   get "products/index"
   get "articles/index"
+
   get "posts/index"
+
   namespace :admin do
     root  "dashboard#index"
     resources :posts
     resources :articles
     resources :products
+
   end
 
 
-
+  resources :products
+  resources :contactus
   resources :newsinfos
 
   resources :menus
