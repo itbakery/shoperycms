@@ -71,6 +71,7 @@ class ProductCatalogsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # add  photo_products_attributes: [:name , :photo]
     def product_catalog_params
       params.require(:product_catalog).permit(:name, :description, :released_on, photo_products_attributes: [:name , :photo] )
     end

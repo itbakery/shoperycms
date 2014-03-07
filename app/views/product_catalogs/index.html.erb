@@ -1,31 +1,33 @@
-<h1>Listing product_catalogs</h1>
+<div class="page-header">
+  <%= link_to new_product_catalog_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Product catalog
+  <% end %>
+  <h1>Listing product_catalogs</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Released on</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @product_catalogs.each do |product_catalog| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= product_catalog.name %></td>
-        <td><%= product_catalog.description %></td>
-        <td><%= product_catalog.released_on %></td>
-        <td><%= link_to 'Show', product_catalog %></td>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Released on</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @product_catalogs) do |product_catalog| %>
+            <td><%= product_catalog.name %></td>
+            <td><%= product_catalog.description %></td>
+            <td><%= product_catalog.released_on %></td>
+            <td><%= link_to 'Show', product_catalog %></td>
         <td><%= link_to 'Edit', edit_product_catalog_path(product_catalog) %></td>
         <td><%= link_to 'Destroy', product_catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product catalog', new_product_catalog_path %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

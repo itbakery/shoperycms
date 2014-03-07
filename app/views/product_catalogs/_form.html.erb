@@ -1,7 +1,8 @@
-<%= form_for(@product_catalog) do |f| %>
+<%= form_for(@product_catalog, :html => { :class => "form-horizontal", :multipart => true }) do |f| %>
   <% if @product_catalog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product_catalog.errors.count, "error") %> prohibited this product_catalog from being saved:</h2>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@product_catalog.errors.count, "error") %> prohibited this product_catalog from being saved:</h4>
 
       <ul>
       <% @product_catalog.errors.full_messages.each do |msg| %>
@@ -11,27 +12,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, :class => "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="form-group">
+    <%= f.label :description, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :description, :class => "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :released_on %><br>
-    <%= f.text_field :released_on %>
+  <div class="form-group">
+    <%= f.label :released_on, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :released_on, :class => "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.fields_for :photo_products do |attachments| %>
-      <%= attachments.label :name , "Photo" %>
-      <%= attachments.text_field :name %>
-      <%= attachments.file_field :photo %>
+  <div class="form-group">
+    <%= f.fields_for  :photo_products do |attachment| %>
+      <%= attachment.label :name , "Photo", class: "col-sm-2 control-label"   %>
+    <div class="col-sm-10">
+      <%= attachment.text_field :name %>
+      <%= attachment.file_field :photo %>
+    </div>
     <% end %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

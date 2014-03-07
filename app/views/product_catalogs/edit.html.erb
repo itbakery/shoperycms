@@ -1,6 +1,13 @@
-<h1>Editing product_catalog</h1>
+<div class="page-header">
+  <%= link_to product_catalogs_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @product_catalog, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing product_catalog</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @product_catalog %> |
-<%= link_to 'Back', product_catalogs_path %>

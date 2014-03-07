@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to products_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_product_path(@product), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show product</h1>
+</div>
 
-<p>
-  <strong>Sku:</strong>
-  <%= @product.sku %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Sku:</dt>
+  <dd><%= @product.sku %></dd>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <dt>Name:</dt>
+  <dd><%= @product.name %></dd>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <dt>Description:</dt>
+  <dd><%= @product.description %></dd>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
+  <dt>Quantity:</dt>
+  <dd><%= @product.quantity %></dd>
 
-<p>
-  <strong>Released on:</strong>
-  <%= @product.released_on %>
-</p>
+  <dt>Released on:</dt>
+  <dd><%= @product.released_on %></dd>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</dl>

@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to photo_products_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_photo_product_path(@photo_product), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show photo_product</h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @photo_product.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @photo_product.name %></dd>
 
-<%= link_to 'Edit', edit_photo_product_path(@photo_product) %> |
-<%= link_to 'Back', photo_products_path %>
+</dl>

@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to product_catalogs_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_product_catalog_path(@product_catalog), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show product_catalog</h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product_catalog.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @product_catalog.name %></dd>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product_catalog.description %>
-</p>
+  <dt>Description:</dt>
+  <dd><%= @product_catalog.description %></dd>
 
-<p>
-  <strong>Released on:</strong>
-  <%= @product_catalog.released_on %>
-</p>
+  <dt>Released on:</dt>
+  <dd><%= @product_catalog.released_on %></dd>
 
-<%= link_to 'Edit', edit_product_catalog_path(@product_catalog) %> |
-<%= link_to 'Back', product_catalogs_path %>
+</dl>
