@@ -1,10 +1,12 @@
 Shoperycms::Application.routes.draw do
+  get "products/index"
   get "articles/index"
   get "posts/index"
   namespace :admin do
     root  "dashboard#index"
     resources :posts
     resources :articles
+    resources :products
   end
 
 
@@ -37,7 +39,6 @@ Shoperycms::Application.routes.draw do
 
   resources :reviews
 
-  resources :products
 
   resources :categories
 
