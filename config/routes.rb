@@ -1,4 +1,6 @@
 Shoperycms::Application.routes.draw do
+  resources :posts
+
   resources :newsinfos
 
   resources :menus
@@ -14,6 +16,9 @@ Shoperycms::Application.routes.draw do
     resources :comments
   end
 
+  resources :posts do
+    resources :comments
+  end
   resources :product_catalogs
 
   resources :photo_products
