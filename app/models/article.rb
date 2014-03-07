@@ -9,5 +9,5 @@ class Article
   field :is_published, type: Mongoid::Boolean, default: false
   field :approved_by, type: String
 
-  embeds_many :comments, as: :commentable, cascade_callbacks: true
+  has_many :comments, as: :commentable
 end
