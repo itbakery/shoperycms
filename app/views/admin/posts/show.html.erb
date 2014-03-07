@@ -1,0 +1,37 @@
+<div class="page-header">
+  <%= link_to admin_posts_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_admin_post_path(@post), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show post</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @post.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @post.body %></dd>
+
+  <dt>Starred:</dt>
+  <dd><%= @post.starred %></dd>
+
+</dl>
+<% if @post.comments.size > 0 %>
+  <h2>Comments</h2>
+  <% for comment in @post.comments %>
+    <h3><%= comment.name %></h3>
+    <p><%= comment.content %></p>
+  <% end %>
+<% end %>
+
+<h2>New Comment</h2>
+<%= form_for [@post, Comment.new] do |f| %>
+  <p><%= f.label :name %> <%= f.text_field :name %></p>
+  <p><%= f.text_area :content, :rows => 10 %></p>
+  <p><%= f.submit %></p>
+<% end %>

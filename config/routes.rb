@@ -1,5 +1,13 @@
 Shoperycms::Application.routes.draw do
-  resources :posts
+  get "articles/index"
+  get "posts/index"
+  namespace :admin do
+    root  "dashboard#index"
+    resources :posts
+    resources :articles
+  end
+
+
 
   resources :newsinfos
 
