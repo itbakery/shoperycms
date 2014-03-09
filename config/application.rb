@@ -26,6 +26,7 @@ module Shoperycms
     # config.i18n.default_locale = :de
     # devise post-install manual config
     config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
   end

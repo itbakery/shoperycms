@@ -32,6 +32,16 @@
 <h2>New Comment</h2>
 <%= form_for [@post, Comment.new] do |f| %>
   <p><%= f.label :name %> <%= f.text_field :name %></p>
-  <p><%= f.text_area :content, :rows => 10 %></p>
+  <p><%= f.text_area :content, :rows => 10,  :class => "textarea form-control" %></p>
   <p><%= f.submit %></p>
 <% end %>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+  //<![CDATA[
+  $(document).ready(function(){
+
+    $('.textarea').wysihtml5();
+
+  })
+  //]]>
+  </script>

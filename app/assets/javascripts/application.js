@@ -19,4 +19,5 @@
 //= require datetimepicker/moment
 //= require datetimepicker/bootstrap-datetimepicker.min
 //= require ckeditor/init
+//= require bootstrap-wysihtml5/b3
 //= require_tree .
