@@ -1,6 +1,8 @@
 Shoperycms::Application.routes.draw do
 
 
+  get "about/index"
+  get "contact/index"
   get "blogs/index"
   get "contactus/index"
   get "products/index"
